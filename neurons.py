@@ -35,7 +35,7 @@ class Neuron():
 		# dot product the inputs and weights then add bias
 		#print(self.inputs)
 		#print(self.bias)
-		print(self.weights)
+		#print(self.weights)
 		z = np.dot(self.weights,self.inputs) + self.bias
 		#print(z)
 		# use the activation function to calculate the output

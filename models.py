@@ -1,6 +1,8 @@
 from layers import Layer
 import numpy as np
 
+
+
 class Model():
 
 	def __init__(self,input):
@@ -20,12 +22,3 @@ class Model():
 
 
 
-inpt = np.array([.333,.45,-.34,-.254,-.85,.99,.75,.23])
-model = Model(inpt)
-model.addLayer(2,'relu')
-model.addLayer(1,'relu')
-model.addLayer(1,'relu')
-model.addLayer(1,'sigmoid')
-model.forward()
-
-#print(model.layers[-1].neurons)
