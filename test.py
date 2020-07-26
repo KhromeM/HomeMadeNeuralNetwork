@@ -7,6 +7,6 @@ def sigmoid(z):
 
 
 
-print(np.random.randn((1))[0])
-
-print([])
+x = np.array([1,2])
+y = np.array([1,2])
+print(np.dot(x,y))

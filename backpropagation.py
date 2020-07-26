@@ -13,13 +13,13 @@ lets break a into its components:
 a = activation(inputs (dot) weights + bias) //the activation function can be relu or sigmoid (what in the wolrd is the derivative for the relu?!?!)
 
 
-Step 1)  start at the last layer, iterate over over every neuron, do :
+Step 2)  start at the last layer, iterate over over every neuron, do :
 		
 			calculate the gradient for the weights, store it as G
 			//calculate the partial derivitive of the activation function, store it as A
 			//calculate the partial derivitive of the bias, store it as B
 
-step 2) 
+step 3) 
 		weights -= G*a
 					 
 '''
