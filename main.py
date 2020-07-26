@@ -1,8 +1,9 @@
  
 ''' 
-The goal is to make a neural network that works on data with 3 features and 
-produces a prediction using linear regression  via gradient descent
+The goal is to make a neural network from sratch that 
+can compute in batches and use gradient descent
 '''
+
 import numpy as np
 from models import Model 
 

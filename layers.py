@@ -24,6 +24,7 @@ class Layer():
 		for n in self.neurons:
 			self.output.append(n.forward())
 		return self.output
+		
 
 
 
