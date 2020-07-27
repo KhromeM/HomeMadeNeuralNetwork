@@ -1,5 +1,4 @@
 from neurons import Neuron
-from backpropagation import cost
 import numpy as np 
 
 
@@ -9,6 +8,7 @@ class Layer():
 		self.neurons = neurons
 		self.activation = activation
 		self.output = []
+		self.previous = []
 
 	def generate(self,inputs):
 		neurons = []
@@ -16,14 +16,7 @@ class Layer():
 			neurons.append(Neuron(inputs,self.activation))
 		self.neurons = neurons
 
-	def backprop(self,labels):
-		for n in self.neurons:
-			#change = gradientDescent(n)
-			n.weights +=.01
-			n.bias +=.01
-
-
-
+	
 	def forward(self,inputs):
 		self.output = []
 		#intializes the neurons if self.neurons is an integer
@@ -34,6 +27,8 @@ class Layer():
 		for n in self.neurons:
 			self.output.append(n.forward())
 
+		self.output = np.array(self.output)
+		self.previous = self.output
 		return self.output
 		
 

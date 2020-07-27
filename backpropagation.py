@@ -25,7 +25,12 @@ step 3)
 '''
 
 '''
-First lets implement backpropagation fo a simple +1 to every weight and bias
+Strat for backpropagation:
+make every layer remeber its most recent output, then use that in GD
+call backpropagation from the Model class to keep the other code clean
 '''
-def cost(y,weights,inputs):
-	gr
+def MSE(labels,outputs):
+	return np.sum((labels-outputs)**2)
+
+def GD():
+	pass
