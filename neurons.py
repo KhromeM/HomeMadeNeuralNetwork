@@ -16,6 +16,8 @@ class Neuron():
 	def sigmoid(self,z):
 		if z>500:
 			return 1
+		elif z <-500:
+			return 0
 		return ((math.e)**z)/((math.e)**z +1)
 
 	def activate(self):

@@ -10,4 +10,4 @@ def sigmoid(z):
 x = np.array([1,2])
 y = np.array([1,2])
 
-print(np.sum(y))
+print(sigmoid(-800))
