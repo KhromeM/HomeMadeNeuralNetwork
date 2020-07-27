@@ -15,7 +15,15 @@ class Layer():
 			neurons.append(Neuron(inputs,self.activation))
 		self.neurons = neurons
 
+	def backprop(self):
+		for n in self.neurons:
+			n.weights +=.01
+			n.bias +=.01
+
+
+
 	def forward(self,inputs):
+		self.output = []
 		#intializes the neurons if self.neurons is an integer
 		if type(self.neurons) == type(1):
 			self.generate(inputs)
@@ -23,6 +31,7 @@ class Layer():
 		#adds the output of each of the neurons in this layer to self.output
 		for n in self.neurons:
 			self.output.append(n.forward())
+
 		return self.output
 		
 

@@ -9,4 +9,7 @@ def sigmoid(z):
 
 x = np.array([1,2])
 y = np.array([1,2])
-print(np.dot(x,y))
+x = [1,2,3]
+
+y = x.reverse()
+print(y)

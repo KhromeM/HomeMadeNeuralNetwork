@@ -12,13 +12,30 @@ class Model():
 	def addLayer(self,neurons,activation):
 		self.layers.append(Layer(neurons,activation))
 
-	def forward(self):
+	def backprop(self):
+		self.layers.reverse()
+
 		for i in self.layers:
-			self.input = i.forward(self.input)
+			i.backprop()
 
-		print(self.input)
-		return self.input
+		self.layers.reverse()
 
+
+
+	def forward(self,counter):
+		output = self.input
+		for i in self.layers:
+			output = i.forward(output)
+
+		self.backprop()
+		print(output, f'epoch: {counter}')
+		return output
+
+	def train(self,epochs):
+		counter = 1
+		while epochs >= counter:
+			self.forward(counter)
+			counter+=1
 
 
 
