@@ -1,4 +1,5 @@
 from neurons import Neuron
+from backpropagation import cost
 import numpy as np 
 
 
@@ -15,8 +16,9 @@ class Layer():
 			neurons.append(Neuron(inputs,self.activation))
 		self.neurons = neurons
 
-	def backprop(self):
+	def backprop(self,labels):
 		for n in self.neurons:
+			#change = gradientDescent(n)
 			n.weights +=.01
 			n.bias +=.01
 

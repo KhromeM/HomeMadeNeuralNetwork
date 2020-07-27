@@ -27,5 +27,5 @@ step 3)
 '''
 First lets implement backpropagation fo a simple +1 to every weight and bias
 '''
-def backProp():
-	pass
+def cost(y,weights,inputs):
+	gr
