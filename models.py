@@ -14,10 +14,17 @@ class Model():
 	def backprop(self,labels):
 		self.layers.reverse()
 		# we reverse the layers to do backpropagation
-
+		alpha =.1
 		for i in self.layers:
 			loss = MSE(labels, i.previous) # will calculate the average mean squared error
-			print(loss, 'loss')
+		#	change -= loss* alhpha
+
+			for j in i.neurons:
+				print(j.weights, 'weights1')
+				j.weights += 0
+				print(i.weights, 'weights2')
+
+	
 		self.layers.reverse()
 		# we reverse it again to the normal oreintation before the next epoch
 
@@ -29,7 +36,7 @@ class Model():
 			outputs = i.forward(outputs)
 
 		self.backprop(labels)
-		print(outputs, f'epoch: {counter}')
+		#print(outputs, f'epoch: {counter}')
 		return outputs
 
 	def train(self,features,labels,epochs):

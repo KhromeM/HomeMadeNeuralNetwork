@@ -30,7 +30,7 @@ make every layer remeber its most recent output, then use that in GD
 call backpropagation from the Model class to keep the other code clean
 '''
 def MSE(labels,outputs):
-	return np.sum((labels-outputs)**2)
+	return (labels-outputs)**2
 
 def GD():
 	pass

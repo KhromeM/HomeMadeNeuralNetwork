@@ -10,10 +10,10 @@ from models import Model
 
 
 X = np.array([.333,.45,-.34,-.254,-.85,.99,.75,.23])
-y = [1]
+y = [.33, -.45, .54]
 model = Model()
-model.addLayer(1,'relu')
+model.addLayer(3,'relu')
+model.addLayer(3,'relu')
 #model.addLayer(1,'relu')
-#model.addLayer(1,'relu')
-model.addLayer(1,'sigmoid')
+#model.addLayer(1,'sigmoid')
 model.train(X,y,5)
