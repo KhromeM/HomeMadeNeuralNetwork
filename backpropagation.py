@@ -1,34 +1,15 @@
 import numpy as np 
 
 '''
-How will this work? (lol I dont know)
+New Strategy:
 
-A = learning rate
+Calculate the partial derivitive of the cost function for every neuron's weight and bias,
+then update the weights and bias's by the derivative * -Alpha
 
-Step 1) We need a Cost function!, let it be MSE for linear regression
-y = prediction
-a = actual
-MSE = (y-a)**2
-lets break a into its components:
-a = activation(inputs (dot) weights + bias) //the activation function can be relu or sigmoid (what in the wolrd is the derivative for the relu?!?!)
-
-
-Step 2)  start at the last layer, iterate over over every neuron, do :
-		
-			calculate the gradient for the weights, store it as G
-			//calculate the partial derivitive of the activation function, store it as A
-			//calculate the partial derivitive of the bias, store it as B
-
-step 3) 
-		weights -= G*a
-					 
+Challenge: how to calculate derivitives
 '''
 
-'''
-Strat for backpropagation:
-make every layer remeber its most recent output, then use that in GD
-call backpropagation from the Model class to keep the other code clean
-'''
+
 def MSE(labels,outputs):
 	return (labels-outputs)**2
 

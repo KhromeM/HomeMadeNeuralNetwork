@@ -19,10 +19,10 @@ class Model():
 			loss = MSE(labels, i.previous) # will calculate the average mean squared error
 		#	change -= loss* alhpha
 
-			for j in i.neurons:
-				print(j.weights, 'weights1')
-				j.weights += 0
-				print(i.weights, 'weights2')
+			#for j in i.neurons:
+			#	print(j.weights, 'weights1')
+			#	j.weights += 0
+			#	print(i.weights, 'weights2')
 
 	
 		self.layers.reverse()
@@ -36,7 +36,7 @@ class Model():
 			outputs = i.forward(outputs)
 
 		self.backprop(labels)
-		#print(outputs, f'epoch: {counter}')
+		print(outputs, f'epoch: {counter}')
 		return outputs
 
 	def train(self,features,labels,epochs):
