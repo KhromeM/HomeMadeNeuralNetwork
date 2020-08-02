@@ -9,5 +9,4 @@ def sigmoid(z):
 
 x = np.array([1,2])
 y = np.array([1,2])
-
-print(x[0])
+print(375+204+324+357)
